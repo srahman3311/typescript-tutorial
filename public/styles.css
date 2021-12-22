@@ -46,6 +46,10 @@ nav a:hover {
     color: red;
 }
 
+main {
+    overflow: auto;
+    max-height: 80vh;
+}
 section.blogs {
     width: 100%;
     text-align: center;
