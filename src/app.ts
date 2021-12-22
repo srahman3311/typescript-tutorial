@@ -23,3 +23,32 @@ blogForm.addEventListener("submit", (event: Event) => {
     blogList.appendChild(blogListItem);
 
 })
+
+
+const getTodos: Function = (): void => {
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.onload = () => {
+
+        type Todo = {userId: number, id: number, title: string, completed: boolean}
+        
+        const data: Todo [] = JSON.parse(xhr.response);
+
+        data.forEach((item: Todo) => {
+            
+            const div: HTMLDivElement = document.createElement("div");
+            const blogListItem: HTMLLIElement = document.createElement("li");
+
+            div.innerHTML = `<h2>${item.title}</h2>`;
+            blogListItem.appendChild(div);
+            blogList.appendChild(blogListItem);
+
+        })
+    }
+    
+    xhr.open('get', 'https://jsonplaceholder.typicode.com/todos', true);
+    xhr.send();
+}
+
+getTodos();

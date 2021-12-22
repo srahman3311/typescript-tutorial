@@ -16,3 +16,19 @@ blogForm.addEventListener("submit", (event) => {
     blogListItem.appendChild(div);
     blogList.appendChild(blogListItem);
 });
+const getTodos = () => {
+    const xhr = new XMLHttpRequest();
+    xhr.onload = () => {
+        const data = JSON.parse(xhr.response);
+        data.forEach((item) => {
+            const div = document.createElement("div");
+            const blogListItem = document.createElement("li");
+            div.innerHTML = `<h2>${item.title}</h2>`;
+            blogListItem.appendChild(div);
+            blogList.appendChild(blogListItem);
+        });
+    };
+    xhr.open('get', 'https://jsonplaceholder.typicode.com/todos', true);
+    xhr.send();
+};
+getTodos();
