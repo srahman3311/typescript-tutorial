@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta name="" />
+        <link rel = "stylesheet" href = "styles.css" type = "text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap" rel="stylesheet">
+        <title>Typescript Tutorial</title>
+    </head>
+    <body>
+        <div class="App">
+            <nav>
+                <div class="home_route">
+                    <a href="">Rafez's Blog Application</a>
+                </div>
+                <div class="other_routes">
+                    <a href="">About</a>
+                    <a href="">Blogs</a>
+                    <a href="">Add New Blog</a>
+                </div>
+            </nav>
+            <main>
+                <section class="blogs">
+                    <h2>Blogs</h2>
+                    <ul class="blog_list">
+
+                    </ul>
+                </section>
+                <section class="add_new_blog">
+                    <form class="blog_form">
+                        <div class="inputs">
+                            <label>Title</label>
+                            <input type="text" name="title" id="blog_title" />
+                        </div>
+                        <div class="inputs">
+                            <label>Content</label>
+                            <textarea name="content" id="blog_content" cols="30" rows="10"></textarea>
+                        </div>
+                        <button type="submit" id="blog_form_button">Submit</button>
+                    </form>
+                </section>
+            </main>
+            <footer>
+                <h2>This is a blogging application</h2>
+            </footer>
+        </div>
+
+        <script src = "app.js" type = "text/javascript"></script>
+    </body>
+</html>

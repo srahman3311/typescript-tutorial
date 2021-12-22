@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.App {
+    position: relative;
+    height: 100vh;
+    /* background-color: burlywood; */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.651);
+}
+
+nav .home_route {
+    padding: 10px 30px;
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav .other_routes {
+    padding: 10px 30px;
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.8s ease-in-out;
+}
+
+nav a:hover {
+    color: red;
+}
+
+section.blogs {
+    width: 100%;
+    text-align: center;
+}
+
+section.add_new_blog {
+    width: 100%;
+    /* background-color: darkcyan; */
+    
+}
+
+form.blog_form {
+    width: 50%;
+    padding: 0.5% 2%;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
+}
+
+form.blog_form label {
+    display: block;
+}
+
+form.blog_form .inputs {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 5px;
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+}
+
+textarea {
+    border: 1px solid rgba(0, 0, 0, 0.267);
+}
+
+input[type=text]:focus, textarea:focus {
+    outline: none;
+}
+
+
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1% 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.651);
+}

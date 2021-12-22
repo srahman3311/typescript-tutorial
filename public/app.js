@@ -1,2 +1,20 @@
 "use strict";
-console.log("hi");
+const blogForm = document.querySelector(".blog_form");
+const blogTitle = document.querySelector("#blog_title");
+const blogContent = document.querySelector("#blog_content");
+const blogFormSubmitButton = document.querySelector("#blog_form_button");
+const blogList = document.querySelector(".blog_list");
+blogForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    console.log(blogTitle.value, blogContent.value);
+    const blogListItem = document.createElement("li");
+    const div = document.createElement("div");
+    const blogTitleElement = document.createElement("p");
+    const blogContentElement = document.createElement("p");
+    blogTitleElement.textContent = blogTitle.value;
+    blogContent.textContent = blogContent.value;
+    div.appendChild(blogTitleElement);
+    div.appendChild(blogContentElement);
+    blogListItem.appendChild(div);
+    blogList.appendChild(blogListItem);
+});
