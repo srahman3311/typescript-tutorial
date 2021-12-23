@@ -1,4 +1,8 @@
 "use strict";
+const anchor = document.querySelector("a");
+const anchor2 = document.querySelector("a");
+console.log(anchor.href);
+console.log(anchor2.href);
 const blogForm = document.querySelector(".blog_form");
 const blogTitle = document.querySelector("#blog_title");
 const blogContent = document.querySelector("#blog_content");
@@ -16,19 +20,3 @@ blogForm.addEventListener("submit", (event) => {
     blogListItem.appendChild(div);
     blogList.appendChild(blogListItem);
 });
-const getTodos = () => {
-    const xhr = new XMLHttpRequest();
-    xhr.onload = () => {
-        const data = JSON.parse(xhr.response);
-        data.forEach((item) => {
-            const div = document.createElement("div");
-            const blogListItem = document.createElement("li");
-            div.innerHTML = `<h2>${item.title}</h2>`;
-            blogListItem.appendChild(div);
-            blogList.appendChild(blogListItem);
-        });
-    };
-    xhr.open('get', 'https://jsonplaceholder.typicode.com/todos', true);
-    xhr.send();
-};
-getTodos();
