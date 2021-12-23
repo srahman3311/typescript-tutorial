@@ -1,7 +1,8 @@
 const getTodos: Function = (): void => {
 
-    const xhr = new XMLHttpRequest();
+    const xhr: XMLHttpRequest = new XMLHttpRequest();
 
+    // onload method is only called when request has successfully been sent and response received
     xhr.onload = () => {
 
         // To handle error we need to check the status code. if it's more than or equal to 200 and less 

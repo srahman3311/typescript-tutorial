@@ -1,6 +1,7 @@
 "use strict";
 const getTodos = () => {
     const xhr = new XMLHttpRequest();
+    // onload method is only called when request has successfully been sent and response received
     xhr.onload = () => {
         // To handle error we need to check the status code. if it's more than or equal to 200 and less 
         // 300 then we have an ok response. Otherwise, alert an error message
